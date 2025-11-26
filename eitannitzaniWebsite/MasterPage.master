@@ -9,13 +9,26 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        date/time:
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    <table width="90%" border="1" >
+        <tr>
+            <td colspan="2" align="center" hight="30px">
+                <h1>Eitan Nitzani Website</h1>
+            </td>
+
+
+            </tr hight="60px">  
+      <td> 
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> 
         
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
+        </asp:ContentPlaceHolder> 
+        </td>
+
+       <td> 
+           קישורים מהירים<br />
+           <a href="homepage.aspx">דף הבית</a><br />
+
+       </td>
+            </table>
+
 </body>
 </html>
