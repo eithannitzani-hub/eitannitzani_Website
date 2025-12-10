@@ -14,7 +14,10 @@
             <br />
 
     בן:<input type="checkbox" name="check1" >
+            <br />
     בת:<input type="checkbox" name="check1">
+            <br />
+    אחר:<input type="text" name="check1">
             <br />
             איזה כיתה אתה
             <br />
