@@ -26,7 +26,7 @@
        <td> 
            קישורים מהירים<br />
            <a href="homepage.aspx">דף הבית</a><br />
-
+           <a href="MyForm.aspx">הרשמה לאתר</a><br />
        </td>
             </table>
 
