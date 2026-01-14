@@ -5,11 +5,48 @@
 <html>
 <head runat="server">
     <title></title>
+
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 90%;
+            height: 800px;
+            border: 2px solid #333333;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        table td {
+            border: 1px solid #aaaaaa;
+            padding: 10px;
+            vertical-align: top;
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            padding: 20px 0;
+        }
+        #menu h2 {
+            color: #2c3e50;
+        }
+        #menu a img {
+            width: 80px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            transition: 0.2s;
+        }
+        #menu a img:hover {
+            border-color: #2c3e50;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <table width="90%" border="1" >
+    <table >
         <tr>
             <td colspan="2" align="center" hight="30px">
                 <h1> <a href ="https://static.wixstatic.com/media/ab7dbe_01a84d8d94394a1186c1e68498311230~mv2.png/v1/fit/w_2500,h_1330,al_c/ab7dbe_01a84d8d94394a1186c1e68498311230~mv2.png" > Eitan Nitzani Website</h1>
@@ -24,10 +61,10 @@
         </td>
 
        <td> 
-           קישורים מהירים<br />
-           <a href="homepage.aspx">דף הבית</a><br />
-           <a href="MyForm.aspx">הרשמה לאתר</a><br />
-            <a href="התחברות.aspx">התחברות</a><br />
+           <h4>קישורים מהירים</h4><br />
+           <a href="homepage.aspx"><img src="תמונות/עמוד%20בית.png" style="width:120px;height:100px;"/></a><br />
+           <a href="MyForm.aspx"><img src="תמונות/myform.png" style="width:120px;height:100px;"/></a><br />
+           <a href="התחברות.aspx"><img src="תמונות/הרשמה%20לאתר.png" style="width:120px;height:100px;"/></a><br />
        </td>
             </table>
 
