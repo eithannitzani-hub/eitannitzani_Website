@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="התחברות.aspx.cs" Inherits="התחברות" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-
-        <meta charset="UTF-8">
-    <title>הרשמה לאתר המסלול</title>
+            <meta charset="UTF-8">
+    <title>log in</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,18 +43,12 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-    
-<div class="form-container">
-    <h2>הרשמה לאתר המסלול</h2>
+    <div class="form-container">
+    <h2>login</h2>
 
     <form runat="server" method="post">
     <table>
-        <tr>
-            <td><label>שם מלא</label></td>
-            <td><input type="text" name="firstname and lastname" id="firstname and lastname" required></td>
-        </tr>
-
+        
         <tr>
             <td><label>אימייל</label></td>
             <td><input type="email" name="email" id="email" required></td>
@@ -67,38 +60,17 @@
         </tr>
 
         <tr>
-            <td><label>גיל</label></td>
-            <td><input type="number" name="age" id="age" min="10" max="30" required></td>
-        </tr>
-
-        <tr>
-            <td><label>כיתה</label></td>
-            <td><input type="text" name="class" id="class" required></td>
-        </tr>
-
-        <tr>
-            <td><label>מין</label></td>
-            <td>
-                <select required>
-                    <option value=""></option>
-                    <option>זכר</option>
-                    <option>נקבה</option>
-                    <option>אחר</option>
-                </select>
-            </td>
-        </tr>
-
-        <tr>
             <td colspan="2" style="text-align:center;">
                 <button type="submit">הרשמה</button>
             </td>
         </tr>
     </table>
+
+<br />
+אין חשבון?
+<br />
+<a href="התחברות.aspx">להרשמה</a>
 </form>
 
 </div>
-
-
-
 </asp:Content>
-

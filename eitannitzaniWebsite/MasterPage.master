@@ -65,6 +65,7 @@
            <a href="homepage.aspx"><img src="תמונות/עמוד%20בית.png" style="width:120px;height:100px;"/></a><br />
            <a href="MyForm.aspx"><img src="תמונות/myform.png" style="width:120px;height:100px;"/></a><br />
            <a href="התחברות.aspx"><img src="תמונות/הרשמה%20לאתר.png" style="width:120px;height:100px;"/></a><br />
+           <a href="login.aspx"><img src= "login.png"  style="width:120px;height:100px;"/></a><br />
        </td>
             </table>
 
