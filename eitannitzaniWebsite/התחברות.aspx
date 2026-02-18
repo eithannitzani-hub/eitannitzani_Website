@@ -53,7 +53,7 @@
     <table>
         <tr>
             <td><label>שם מלא</label></td>
-            <td><input type="text" name="firstname and lastname" id="firstname and lastname" required></td>
+            <td><input type="text" name="fullname" id="fullname" required></td>
         </tr>
 
         <tr>
@@ -79,11 +79,11 @@
         <tr>
             <td><label>מין</label></td>
             <td>
-                <select required>
-                    <option value=""></option>
-                    <option>זכר</option>
-                    <option>נקבה</option>
-                    <option>אחר</option>
+                <select required name="gender">
+                    <option value="0">בחר</option>
+                    <option value="זכר">זכר</option>
+                    <option value="נקבה">נקבה</option>
+                    <option value="אחר">אחר</option>
                 </select>
             </td>
         </tr>
