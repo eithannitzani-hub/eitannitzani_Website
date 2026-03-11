@@ -15,7 +15,8 @@ public partial class login : System.Web.UI.Page
             string password = Request.Form["password"];
 
             //שאילתת הכנסה
-            string sqlInsert = "select;
+            string sqlInsert = "select";
 
         }
+    }
 }

@@ -95,7 +95,7 @@
         </tr>
     </table>
 </form>
-
+    <%=st %>
 </div>
 
 

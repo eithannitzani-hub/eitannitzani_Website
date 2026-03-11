@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class התחברות : System.Web.UI.Page
 {
-    
+    public string st = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack) //שלח
@@ -19,8 +19,20 @@ public partial class התחברות : System.Web.UI.Page
             string userClass = Request.Form["class"];
             string gender = Request.Form["gender"];
 
-            //שאילתת הכנסה
-            string sqlInsert = "INSERT INTO tUsers " +
+            string sqlCheck =
+            "SELECT * FROM tUsers WHERE Email = N'" + email + "'";
+
+            bool exists = MyAdoHelper.IsExist(sqlCheck);
+
+            if (exists)
+            {
+                st = "מייל שהוכנס קיים במערכת, הכנס אימייל חדש";
+            }
+            else
+            {
+
+                //שאילתת הכנסה
+                string sqlInsert = "INSERT INTO tUsers " +
                 "VALUES (N'" + fullname +
                 "', N'" + email +
                 "', N'" + password +
@@ -28,13 +40,18 @@ public partial class התחברות : System.Web.UI.Page
                 ", N'" + userClass +
                 "', N'" + gender + "')";
 
-            //הרצת השאילתא על DB
-            MyAdoHelper.DoQuery("MyDB.mdf",sqlInsert);
+                //הרצת השאילתא על DB
+                MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
 
-            //עבור דף
-            Response.Redirect("homepage.aspx");
+                //עבור דף
+                Response.Redirect("homepage.aspx");
+
+
+
+            }
 
         }
-
     }
+
+
 }
