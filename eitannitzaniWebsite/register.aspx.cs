@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class התחברות : System.Web.UI.Page
+public partial class register : System.Web.UI.Page
 {
     public string st = "";
     protected void Page_Load(object sender, EventArgs e)

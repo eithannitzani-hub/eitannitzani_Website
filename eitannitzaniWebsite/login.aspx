@@ -71,6 +71,7 @@
 <br />
 <a href="התחברות.aspx">להרשמה</a>
 </form>
+        <%=st %>
 
 </div>
 </asp:Content>
