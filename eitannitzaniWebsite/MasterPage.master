@@ -49,7 +49,8 @@
     <table >
         <tr>
             <td colspan="2" align="center" hight="30px">
-                <h1> <a href ="https://static.wixstatic.com/media/ab7dbe_01a84d8d94394a1186c1e68498311230~mv2.png/v1/fit/w_2500,h_1330,al_c/ab7dbe_01a84d8d94394a1186c1e68498311230~mv2.png" > Eitan Nitzani Website</h1>
+                <h1>     Eitan Nitzani Website      </h1>
+                        <img src= "https://static.wixstatic.com/media/ab7dbe_01a84d8d94394a1186c1e68498311230~mv2.png/v1/fit/w_2500,h_1330,al_c/ab7dbe_01a84d8d94394a1186c1e68498311230~mv2.png" style="width:120px;height:100px;"/>
             </td>
 
 
@@ -65,7 +66,7 @@
            <a href="homepage.aspx"><img src="תמונות/עמוד%20בית.png" style="width:120px;height:100px;"/></a><br />
            <a href="MyForm.aspx"><img src="תמונות/myform.png" style="width:120px;height:100px;"/></a><br />
            <a href="התחברות.aspx"><img src="תמונות/הרשמה%20לאתר.png" style="width:120px;height:100px;"/></a><br />
-           <a href="login.aspx"><img src= "login.png"  style="width:120px;height:100px;"/></a><br />
+           <a href="login.aspx"><img src= "תמונות/login.png"  style="width:120px;height:100px;"/></a><br />
        </td>
             </table>
 
