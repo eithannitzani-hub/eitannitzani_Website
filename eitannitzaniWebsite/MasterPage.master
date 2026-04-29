@@ -46,6 +46,10 @@
     </style>
 </head>
 <body>
+    <%if (Session["nihol"] == "ok" || Session["user"] == "ok")
+        {  %>
+    שלום<%=Session["fullname"] %>
+    <%} %>
     <table >
         <tr>
             <td colspan="2" align="center" hight="30px">
@@ -67,6 +71,10 @@
            <a href="MyForm.aspx"><img src="תמונות/myform.png" style="width:120px;height:100px;"/></a><br />
            <a href="register.aspx"><img src="תמונות/הרשמה%20לאתר.png" style="width:120px;height:100px;"/></a><br />
            <a href="login.aspx"><img src= "תמונות/login.png"  style="width:120px;height:100px;"/></a><br />
+           <%if (Session["nihol"] == "ok"  ){ %>
+           <a href="manager.aspx"><img src="תמונות/תמונה%20מנהל1.png"  style="width:120px;height:100px;" /></a><br />
+           <% } %>
+
        </td>
             </table>
 
