@@ -69,7 +69,7 @@
 <br />
 אין חשבון?
 <br />
-<a href="התחברות.aspx">להרשמה</a>
+<a href="register.aspx">להרשמה</a>
 </form>
         <%=st %>
 
