@@ -2,6 +2,40 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
+    <script language="javascript">
+        function checkAll() {
+            fullnameErr.innerHTML = "";
+            emailErr.innerHTML = "";
+            f = true;
+            if (checkFullName() == false)
+                f = false;
+            if (checkEmail() == false)
+                f = false;
+            return f;
+        }// סוף פעולה ראשית
+
+        function checkFullName() {
+            name = document.getElementById("fn").value;
+            //alert(name);
+
+            if (name.length < 2 || name.length > 30) {
+                fnErr.innerHTML = "אורך השם הפרטי לא תקין";
+                return false;
+            }
+            return true;
+        } // סוף בדיקת שם
+
+        function checkemail() {
+            email = document.getElementById("email").value;
+            //alert(name);
+
+            if (email.length < 2 || email.length > 30) {
+                emailErr.innerHTML = "אורך email לא תקין";
+                return false;
+            }
+            return true;
+        } // סוף בדיקת XXX
+    </script>
         <meta charset="UTF-8">
     <title>הרשמה לאתר המסלול</title>
     <style>
@@ -49,16 +83,18 @@
 <div class="form-container">
     <h2>הרשמה לאתר המסלול</h2>
 
-    <form runat="server" method="post">
+    <form runat="server" method="post" onsubmit="return checkAll();">
     <table>
         <tr>
             <td><label>שם מלא</label></td>
             <td><input type="text" name="fullname" id="fullname" required></td>
+            <td id =" fullnameErr"></td>
         </tr>
 
         <tr>
             <td><label>אימייל</label></td>
             <td><input type="email" name="email" id="email" required></td>
+            <td id =" emailErr"></td>
         </tr>
 
         <tr>
