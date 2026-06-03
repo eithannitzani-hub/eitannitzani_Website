@@ -6,26 +6,29 @@
         function checkAll() {
             fullnameErr.innerHTML = "";
             emailErr.innerHTML = "";
+
             f = true;
+
             if (checkFullName() == false)
                 f = false;
             if (checkEmail() == false)
                 f = false;
+
             return f;
         }// סוף פעולה ראשית
 
         function checkFullName() {
-            name = document.getElementById("fn").value;
+            name = document.getElementById("fullname").value;
             //alert(name);
 
             if (name.length < 2 || name.length > 30) {
-                fnErr.innerHTML = "אורך השם הפרטי לא תקין";
+                fullnameErr.innerHTML = "אורך השם הפרטי לא תקין";
                 return false;
             }
             return true;
         } // סוף בדיקת שם
 
-        function checkemail() {
+        function checkEmail() {
             email = document.getElementById("email").value;
             //alert(name);
 
@@ -87,29 +90,29 @@
     <table>
         <tr>
             <td><label>שם מלא</label></td>
-            <td><input type="text" name="fullname" id="fullname" required></td>
-            <td id =" fullnameErr"></td>
+            <td><input type="text" name="fullname" id="fullname" ></td>
+            <td id ="fullnameErr"></td>
         </tr>
 
         <tr>
             <td><label>אימייל</label></td>
-            <td><input type="email" name="email" id="email" required></td>
-            <td id =" emailErr"></td>
+            <td><input type="email" name="email" id="email" ></td>
+            <td id ="emailErr"></td>
         </tr>
 
         <tr>
             <td><label>סיסמה</label></td>
-            <td><input type="password" name="password" id="password" required></td>
+            <td><input type="password" name="password" id="password" ></td>
         </tr>
 
         <tr>
             <td><label>גיל</label></td>
-            <td><input type="number" name="age" id="age" min="10" max="30" required></td>
+            <td><input type="number" name="age" id="age" min="10" max="30" ></td>
         </tr>
 
         <tr>
             <td><label>כיתה</label></td>
-            <td><input type="text" name="class" id="class" required></td>
+            <td><input type="text" name="class" id="class" ></td>
         </tr>
 
         <tr>
