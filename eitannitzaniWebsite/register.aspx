@@ -15,31 +15,34 @@
                 f = false;
 
             return f;
-        }// סוף פעולה ראשית
+        }
 
         function checkFullName() {
             name = document.getElementById("fullname").value;
-            //alert(name);
 
             if (name.length < 2 || name.length > 30) {
                 fullnameErr.innerHTML = "אורך השם הפרטי לא תקין";
                 return false;
             }
+
+            if (/\d/.test(name)) {
+                fullnameErr.innerHTML = "השם לא יכול להכיל מספר";
+                return false;
+            }
             return true;
-        } // סוף בדיקת שם
+        }
 
         function checkEmail() {
             email = document.getElementById("email").value;
-            //alert(name);
 
             if (email.length < 2 || email.length > 30) {
                 emailErr.innerHTML = "אורך email לא תקין";
                 return false;
             }
             return true;
-        } // סוף בדיקת XXX
+        }
     </script>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>הרשמה לאתר המסלול</title>
     <style>
         body {
@@ -82,22 +85,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    
 <div class="form-container">
     <h2>הרשמה לאתר המסלול</h2>
 
-    <form runat="server" method="post" onsubmit="return checkAll();">
     <table>
         <tr>
             <td><label>שם מלא</label></td>
             <td><input type="text" name="fullname" id="fullname" ></td>
-            <td id ="fullnameErr"></td>
+            <td id="fullnameErr"></td>
         </tr>
 
         <tr>
             <td><label>אימייל</label></td>
             <td><input type="email" name="email" id="email" ></td>
-            <td id ="emailErr"></td>
+            <td id="emailErr"></td>
         </tr>
 
         <tr>
@@ -129,15 +130,11 @@
 
         <tr>
             <td colspan="2" style="text-align:center;">
-                <button type="submit">הרשמה</button>
+                <button type="submit" onclick="return checkAll();">הרשמה</button>
             </td>
         </tr>
     </table>
-</form>
     <%=st %>
 </div>
 
-
-
 </asp:Content>
-

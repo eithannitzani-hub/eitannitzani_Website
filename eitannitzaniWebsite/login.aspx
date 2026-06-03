@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-            <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>log in</title>
     <style>
         body {
@@ -44,34 +44,31 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="form-container">
-    <h2>login</h2>
+        <h2>login</h2>
 
-    <form runat="server" method="post">
-    <table>
-        
-        <tr>
-            <td><label>אימייל</label></td>
-            <td><input type="email" name="email" id="email" required></td>
-        </tr>
+        <table>
+            <tr>
+                <td><label>אימייל</label></td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
 
-        <tr>
-            <td><label>סיסמה</label></td>
-            <td><input type="password" name="password" id="password" required></td>
-        </tr>
+            <tr>
+                <td><label>סיסמה</label></td>
+                <td><input type="password" name="password" id="password" required></td>
+            </tr>
 
-        <tr>
-            <td colspan="2" style="text-align:center;">
-                <button type="submit">הרשמה</button>
-            </td>
-        </tr>
-    </table>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">התחברות</button>
+                </td>
+            </tr>
+        </table>
 
-<br />
-אין חשבון?
-<br />
-<a href="register.aspx">להרשמה</a>
-</form>
+        <br />
+        אין חשבון?
+        <br />
+        <a href="register.aspx">להרשמה</a>
+
         <%=st %>
-
-</div>
+    </div>
 </asp:Content>
