@@ -104,7 +104,7 @@
         </p>
 
         <a href="register.aspx" class="btn-primary">
-            להרשמה
+            להרשמה.
         </a>
 </asp:Content>
 
