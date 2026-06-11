@@ -9,6 +9,18 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
+                .menu-btn {
+            width: 120px;
+            height: 100px;
+            margin: 10px 0;
+            display: block;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.08);
+        }
         body {
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
@@ -65,18 +77,59 @@
 
        <td> 
            <h4>קישורים מהירים</h4><br />
-           <a href="homepage.aspx"><img src="תמונות/עמוד%20בית.png" style="width:120px;height:100px;"/></a><br />
-            <a href="MyForm.aspx"><img src="תמונות/myform.png" style="width:120px;height:100px;"/></a><br />
-            <%if (Session["user"] == null && Session["nihol"] == null) { %>
-            <a href="register.aspx"><img src="תמונות/הרשמה%20לאתר.png" style="width:120px;height:100px;"/></a><br />
-            <a href="login.aspx"><img src="תמונות/login.png" style="width:120px;height:100px;"/></a><br />
-            <% } %>
-           <%if (Session["nihol"] == "ok"  ){ %>
-           <a href="manager.aspx"><img src="תמונות/תמונה%20מנהל1.png"  style="width:120px;height:100px;" /></a><br />
-           <% } %>
-            <%if (Session["nihol"] == "ok"  || Session["user"] == "ok"  ){ %>
-              <a href="logout.aspx"><img src="תמונות/תמונה4.png"  style="width:120px;height:100px;" /></a><br />
-             <% } %>
+              <a href="default.aspx">
+    <img class="menu-btn"
+         src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
+         alt="דף בית">
+</a>
+
+<a href="homepage.aspx">
+    <img class="menu-btn"
+         src="תמונות/עמוד%20בית.png"
+         alt="עמוד בית">
+</a>
+
+<a href="MyForm.aspx">
+    <img class="menu-btn"
+         src="תמונות/myform.png"
+         alt="טופס">
+</a>
+
+<% if (Session["user"] == null && Session["nihol"] == null) { %>
+
+<a href="register.aspx">
+    <img class="menu-btn"
+         src="תמונות/הרשמה%20לאתר.png"
+         alt="הרשמה">
+</a>
+
+<a href="login.aspx">
+    <img class="menu-btn"
+         src="תמונות/login.png"
+         alt="התחברות">
+</a>
+
+<% } %>
+
+<% if (Session["nihol"] == "ok") { %>
+
+<a href="manager.aspx">
+    <img class="menu-btn"
+         src="תמונות/תמונה%20מנהל1.png"
+         alt="מנהל">
+</a>
+
+<% } %>
+
+<% if (Session["nihol"] == "ok" || Session["user"] == "ok") { %>
+
+<a href="logout.aspx">
+    <img class="menu-btn"
+         src="תמונות/תמונה4.png"
+         alt="התנתקות">
+</a>
+
+<% } %>
        </td>
     </table>
     </form>
